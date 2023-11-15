@@ -1,8 +1,8 @@
-# k-age-calculator
+# 🖐️k-age-calculator
 
 This project has been planned to introduce foreigners to the Korean method of calculating age and provide information about zodiac signs.
 
-# Init Project
+# 📚Init Project
 
 If you enter the following command in the terminal, the project will be installed and started
 
@@ -11,6 +11,16 @@ git clone https://github.com/SoJuSo/k-age-calculator.git && cd k-age-calculator
 npm install
 npm run dev
 ```
+
+# ✨Stack
+
+| Types          | Techs            |
+| -------------- | ---------------- |
+| Language       | Javascript       |
+| Library        | React            |
+| Bundler        | Vite             |
+| Styling        | SCSS             |
+| Code Formatter | eslint, prettier |
 
 # React + Vite
 
