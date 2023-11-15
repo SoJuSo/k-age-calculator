@@ -4,7 +4,7 @@ This project has been planned to introduce foreigners to the Korean method of ca
 
 # 📚Init Project
 
-If you enter the following command in the terminal, the project will be installed and started
+If you enter the following command in the terminal, the project will be installed and launched
 
 ```bash
 git clone https://github.com/SoJuSo/k-age-calculator.git && cd k-age-calculator
