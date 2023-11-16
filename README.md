@@ -21,6 +21,7 @@ npm run dev
 | Bundler        | Vite             |
 | Styling        | SCSS             |
 | Code Formatter | eslint, prettier |
+| Deploy         | Vercel           |
 
 # React + Vite
 
