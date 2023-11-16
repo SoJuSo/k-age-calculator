@@ -1,10 +1,10 @@
-import { useState } from "react";
 import "./App.css";
+import AgeCalculate from "./AgeCalculate.jsx";
 
 function App() {
   return (
     <>
-      <div>Hello!</div>
+      <AgeCalculate />
     </>
   );
 }
