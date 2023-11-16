@@ -1,10 +1,10 @@
 import "./App.css";
-import AgeCalculate from "./AgeCalculate.jsx";
+import AgeInput from "./AgeInput.jsx";
 
 function App() {
   return (
     <>
-      <AgeCalculate />
+      <AgeInput />
     </>
   );
 }

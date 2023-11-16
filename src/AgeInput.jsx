@@ -1,21 +1,34 @@
 import React, { useState, useEffect } from "react";
 
-const AgeCalculate = () => {
+const AgeInput = () => {
   const currentYear = new Date().getFullYear();
-  const years = Array.from({ length: 10 }, (_, index) => currentYear - index);
+  const years = Array.from({ length: 100 }, (_, index) => currentYear - index);
   const months = Array.from({ length: 12 }, (_, index) => index + 1);
 
   const [selectedYear, setSelectedYear] = useState(currentYear);
   const [selectedMonth, setSelectedMonth] = useState(1);
   const [selectedDay, setSelectedDay] = useState(1);
+  const [koreanAge, setKoreanAge] = useState(null);
 
   useEffect(() => {
-    updateDaysInMonth();
-  }, [selectedMonth]);
+    calculateKoreanAge();
+  }, [selectedMonth, selectedYear, selectedDay]);
 
-  const updateDaysInMonth = () => {
-    const daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
-    setSelectedDay((prevDay) => (prevDay > daysInMonth ? daysInMonth : prevDay));
+  const calculateKoreanAge = () => {
+    const today = new Date();
+    const birthDate = new Date(selectedYear, selectedMonth - 1, selectedDay);
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    // 만 나이 계산
+    if (
+      today.getMonth() < birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+
+    setKoreanAge(age);
   };
 
   const handleYearChange = (e) => {
@@ -61,12 +74,15 @@ const AgeCalculate = () => {
         )}
       </select>
 
-      <p>
-        Selected Date: {selectedYear}-{selectedMonth < 10 ? `0${selectedMonth}` : selectedMonth}-
-        {selectedDay < 10 ? `0${selectedDay}` : selectedDay}
-      </p>
+      {koreanAge !== null && (
+        <div>
+          <p>만 나이 Korean Age: {koreanAge - 1}</p>
+          <p>연 나이 Korean Age: {koreanAge}</p>
+          <p>세는 나이 Korean Age: {koreanAge + 1}</p>
+        </div>
+      )}
     </div>
   );
 };
 
-export default AgeCalculate;
+export default AgeInput;
