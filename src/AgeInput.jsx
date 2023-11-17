@@ -8,7 +8,9 @@ const AgeInput = () => {
   const [selectedYear, setSelectedYear] = useState(currentYear);
   const [selectedMonth, setSelectedMonth] = useState(1);
   const [selectedDay, setSelectedDay] = useState(1);
-  const [koreanAge, setKoreanAge] = useState(null);
+  const [koreanAge, setKoreanAge] = useState(null); // 만 나이
+  const [internationalAge, setInternationalAge] = useState(null); // 연 나이
+  const [formerKoreanAge, setFormerKoreanAge] = useState(null); // 세는 나이
 
   useEffect(() => {
     calculateKoreanAge();
@@ -19,7 +21,10 @@ const AgeInput = () => {
     const birthDate = new Date(selectedYear, selectedMonth - 1, selectedDay);
 
     let age = today.getFullYear() - birthDate.getFullYear();
+    console.log(age);
 
+    setInternationalAge(age);
+    setFormerKoreanAge(age + 1);
     // 만 나이 계산
     if (
       today.getMonth() < birthDate.getMonth() ||
@@ -27,7 +32,6 @@ const AgeInput = () => {
     ) {
       age--;
     }
-
     setKoreanAge(age);
   };
 
@@ -76,9 +80,9 @@ const AgeInput = () => {
 
       {koreanAge !== null && (
         <div>
-          <p>만 나이 Korean Age: {koreanAge - 1}</p>
-          <p>연 나이 Korean Age: {koreanAge}</p>
-          <p>세는 나이 Korean Age: {koreanAge + 1}</p>
+          <p>만 나이 Korean Age: {koreanAge - 1 < 0 ? 0 : koreanAge}</p>
+          <p>연 나이 Korean Age: {internationalAge}</p>
+          <p>세는 나이 Korean Age: {formerKoreanAge}</p>
         </div>
       )}
     </div>
