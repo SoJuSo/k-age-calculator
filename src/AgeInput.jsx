@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AgeOutput from "./AgeOutput.jsx";
+import ZodiacSign from "./ZodiacSign.jsx";
 
 const AgeInput = () => {
   const currentYear = new Date().getFullYear();
@@ -54,6 +55,7 @@ const AgeInput = () => {
       </select>
 
       <AgeOutput data={{ selectedYear: selectedYear, selectedDay: selectedDay, selectedMonth: selectedMonth }} />
+      <ZodiacSign data={{ birthYear: selectedYear }} />
     </div>
   );
 };
