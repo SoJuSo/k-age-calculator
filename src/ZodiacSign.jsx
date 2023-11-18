@@ -20,7 +20,7 @@ const ZodiacSign = (props) => {
 
     // 띠 계산 (12로 나눈 나머지를 기준으로 띠를 판별)
     const zodiacIndex = birthYear % 12;
-    console.log(zodiacIndex);
+    // console.log(zodiacIndex);
     const sign = zodiacSigns[zodiacIndex];
 
     return sign;
