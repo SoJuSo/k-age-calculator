@@ -27,12 +27,21 @@ const AgeOutput = (props) => {
   };
 
   return (
-    <div>
+    <div className="Korean-age-wrapper">
       {koreanAge !== null && (
-        <div>
-          <p>Ordinary Korean Age: {koreanAge - 1 < 0 ? 0 : koreanAge} || aka 만 나이</p>
-          <p>Now Korean Age(western age): {internationalAge} || aka 연 나이</p>
-          <p>Former Korean Age: {formerKoreanAge} || aka 세는 나이</p>
+        <div className="age--items">
+          <div>
+            Ordinary Korean Age: <span>{koreanAge - 1 < 0 ? 0 : koreanAge}</span>
+            <p>aka 만 나이</p>
+          </div>
+          <div>
+            Recent Korean Age(western age): <span>{internationalAge}</span>
+            <p>aka 연 나이</p>
+          </div>
+          <div>
+            Former Korean Age: <span>{formerKoreanAge}</span>
+            <p>aka 세는 나이</p>
+          </div>
         </div>
       )}
     </div>

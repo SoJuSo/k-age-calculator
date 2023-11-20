@@ -1,9 +1,10 @@
-import AgeInput from "./AgeInput.jsx";
+import AgeData from "./AgeData.jsx";
+import "./style.css";
 
 const App = () => {
   return (
     <>
-      <AgeInput />
+      <AgeData />
     </>
   );
 };

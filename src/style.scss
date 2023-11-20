@@ -1,7 +1,16 @@
 html,
 body {
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(45deg, #17436e 50%, rgb(161, 47, 47) 50%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
 }
 
 #root {
@@ -11,6 +20,7 @@ body {
 }
 
 .wrapper {
+  font-size: 24px;
   display: flex;
   margin-top: 200px;
   flex-direction: column;
@@ -42,9 +52,27 @@ body {
 .Korean-age-wrapper {
   display: flex;
   text-align: start;
-  color: red;
+  color: #ddd;
+
+  & .age--items {
+    & div {
+      & span {
+        font-size: 32px;
+      }
+
+      & p {
+        color: #eee;
+        margin-top: 2px;
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 .Zodiac-Sign {
-  color: blue;
+  color: #ddd;
+  & span {
+    color: #eee;
+    font-size: 32px;
+  }
 }
