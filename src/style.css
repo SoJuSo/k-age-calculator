@@ -1,0 +1,71 @@
+@charset "UTF-8";
+html,
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #17436e 50%, rgb(161, 47, 47) 50%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+}
+
+#root {
+  margin: 10px;
+  width: auto;
+  height: 100%;
+}
+
+.wrapper {
+  font-size: 24px;
+  display: flex;
+  margin-top: 200px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.wrapper > .wrapper-itemList {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 50px;
+}
+.wrapper > .wrapper-itemList > .wrapper--item {
+  margin: 10px;
+}
+.wrapper > .wrapper-itemList > .wrapper--item label {
+  margin-right: 5px;
+}
+.wrapper > .wrapper-itemList > .wrapper--item select {
+  border-radius: 5px;
+  width: 70px;
+  height: 30px; /* 원하는 높이로 조정 */
+}
+
+.Korean-age-wrapper {
+  display: flex;
+  text-align: start;
+  color: #ddd;
+}
+.Korean-age-wrapper .age--items div span {
+  font-size: 32px;
+}
+.Korean-age-wrapper .age--items div p {
+  color: #eee;
+  margin-top: 2px;
+  font-size: 16px;
+}
+
+.Zodiac-Sign {
+  color: #ddd;
+}
+.Zodiac-Sign span {
+  color: #eee;
+  font-size: 32px;
+}
+
+/*# sourceMappingURL=style.css.map */
