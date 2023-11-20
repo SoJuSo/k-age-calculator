@@ -1,0 +1,49 @@
+@charset "UTF-8";
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  margin: 10px;
+  width: auto;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  margin-top: 200px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.wrapper > .wrapper-itemList {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 50px;
+}
+.wrapper > .wrapper-itemList > .wrapper--item {
+  margin: 10px;
+}
+.wrapper > .wrapper-itemList > .wrapper--item label {
+  margin-right: 5px;
+}
+.wrapper > .wrapper-itemList > .wrapper--item select {
+  border-radius: 5px;
+  width: 70px;
+  height: 30px; /* 원하는 높이로 조정 */
+}
+
+.Korean-age-wrapper {
+  display: flex;
+  text-align: start;
+  color: red;
+}
+
+.Zodiac-Sign {
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
