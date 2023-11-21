@@ -7,7 +7,7 @@ body {
   background: linear-gradient(45deg, #17436e 50%, rgb(161, 47, 47) 50%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,9 +21,9 @@ body {
 }
 
 .wrapper {
-  font-size: 24px;
+  font-size: 1.5rem;
   display: flex;
-  margin-top: 200px;
+  margin-top: 20%;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -52,12 +52,12 @@ body {
   color: #ddd;
 }
 .Korean-age-wrapper .age--items div span {
-  font-size: 32px;
+  font-size: 2rem;
 }
 .Korean-age-wrapper .age--items div p {
   color: #eee;
   margin-top: 2px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .Zodiac-Sign {
@@ -65,7 +65,7 @@ body {
 }
 .Zodiac-Sign span {
   color: #eee;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
