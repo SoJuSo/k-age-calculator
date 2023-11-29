@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ZodiacModal = ({ isOpen, closeModal, content }) => {
+  // const [zodiacContent, setZodiacContent] = useState("");
+
+  // content !== "" ? setZodiacContent(content) : 0;
   return (
     <>
       {isOpen && (
