@@ -33,10 +33,17 @@ const ZodiacSign = (props) => {
     const text = e.target.textContent;
     setZodiacText(text);
     setModalIsOpen(true);
+
+    window.addEventListener("keyup", handleEscapeKey);
+  };
+
+  const handleEscapeKey = (e) => {
+    e.key === "Escape" ? closeModal() : 0;
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
+    window.removeEventListener("keyup", handleEscapeKey);
   };
 
   return (
