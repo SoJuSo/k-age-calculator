@@ -7,7 +7,7 @@ const AgeOutput = (props) => {
 
   useEffect(() => {
     calculateKoreanAge();
-  }, [selectedMonth, selectedYear, selectedDay]);
+  });
 
   const calculateKoreanAge = () => {
     const today = new Date();

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AgeOutput from "./AgeOutput.jsx";
 import ZodiacSign from "./ZodiacSign.jsx";
 
@@ -49,18 +49,25 @@ const AgeInput = () => {
         <div className="wrap__day wrapper--item">
           <label htmlFor="day">Select a day :</label>
           <select id="day" value={selectedDay} onChange={handleDayChange}>
-            {Array.from({ length: new Date(selectedYear, selectedMonth, 0).getDate() }, (_, index) => index + 1).map(
-              (day) => (
-                <option key={day} value={day}>
-                  {day}
-                </option>
-              )
-            )}
+            {Array.from(
+              { length: new Date(selectedYear, selectedMonth, 0).getDate() },
+              (_, index) => index + 1
+            ).map((day) => (
+              <option key={day} value={day}>
+                {day}
+              </option>
+            ))}
           </select>
         </div>
       </div>
 
-      <AgeOutput data={{ selectedYear: selectedYear, selectedDay: selectedDay, selectedMonth: selectedMonth }} />
+      <AgeOutput
+        data={{
+          selectedYear: selectedYear,
+          selectedDay: selectedDay,
+          selectedMonth: selectedMonth,
+        }}
+      />
       <ZodiacSign data={{ birthYear: selectedYear }} />
     </div>
   );
