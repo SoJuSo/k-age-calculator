@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import ZodiacModal from "./ZodiacModal.jsx";
 
 const ZodiacSign = (props) => {
   const birthYear = props.data.birthYear;
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [zodiacText, setZodiacText] = useState("");
   const calculateZodiacSign = () => {
     const zodiacSigns = [
       "Monkey",
@@ -25,11 +28,30 @@ const ZodiacSign = (props) => {
     return sign;
   };
 
+  const ZodiacSignClick = (e) => {
+    // console.log(e.target.textContent);
+    const text = e.target.textContent;
+    setZodiacText(text);
+    setModalIsOpen(true);
+
+    window.addEventListener("keyup", handleEscapeKey);
+  };
+
+  const handleEscapeKey = (e) => {
+    e.key === "Escape" ? closeModal() : 0;
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    window.removeEventListener("keyup", handleEscapeKey);
+  };
+
   return (
     <div className="Zodiac-Sign">
       <p>
-        Your Zodiac Sign: <span>{calculateZodiacSign()}</span>
+        Your Zodiac Sign: <span onClick={ZodiacSignClick}>{calculateZodiacSign()}</span>
       </p>
+      <ZodiacModal isOpen={modalIsOpen} closeModal={closeModal} content={`Zodiac: ${zodiacText}`} />
     </div>
   );
 };

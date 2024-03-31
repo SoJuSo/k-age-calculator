@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 const AgeOutput = (props) => {
   const { selectedYear, selectedMonth, selectedDay } = props.data;
   const [koreanAge, setKoreanAge] = useState(null); // 만 나이
@@ -7,7 +7,7 @@ const AgeOutput = (props) => {
 
   useEffect(() => {
     calculateKoreanAge();
-  }, [selectedMonth, selectedYear, selectedDay]);
+  });
 
   const calculateKoreanAge = () => {
     const today = new Date();
