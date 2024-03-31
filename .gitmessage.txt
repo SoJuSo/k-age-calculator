@@ -1,0 +1,19 @@
+################
+# ✨feat : add new feature
+# 🐛fix : fix issue
+# 📝docs : update Readme Docs
+# ♻️refactor : simplify logic
+# 🎨style : improve readability of codebase
+# 💄design : revamp user interface
+# 🔧chore : update dependencies or settings
+# 💡comment : add explanatory comments
+# 🚚rename : rename files
+# 🗑️remove : remove redundant files
+################
+
+################
+# Please write your specific content below
+# Remember to separate multiple lines with "-" and keep each line within 72 characters.
+# ===========Write your content here============
+
+# ===========Please do not remove the space below (for automatic code separation).
