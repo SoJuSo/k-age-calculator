@@ -1,0 +1,6 @@
+- Try applying SSR template
+- Change deployment to cloudPage
+- Add analytics tools
+  - Determine candidates
+- Properly divide components
+- Apply patterns to components
