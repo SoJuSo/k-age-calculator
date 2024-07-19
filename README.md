@@ -1,3 +1,5 @@
+Nextjs 14, tw 기반으로 재구현 예정
+
 # 🖐️k-age-calculator
 
 This project has been planned to introduce foreigners to the Korean method of calculating age and provide information about zodiac signs.

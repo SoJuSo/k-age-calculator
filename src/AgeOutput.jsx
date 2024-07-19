@@ -19,7 +19,8 @@ const AgeOutput = (props) => {
     // 만 나이 계산
     if (
       today.getMonth() < birthDate.getMonth() ||
-      (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())
+      (today.getMonth() === birthDate.getMonth() &&
+        today.getDate() < birthDate.getDate())
     ) {
       age--;
     }
@@ -31,7 +32,8 @@ const AgeOutput = (props) => {
       {koreanAge !== null && (
         <div className="age--items">
           <div>
-            Ordinary Korean Age: <span>{koreanAge - 1 < 0 ? 0 : koreanAge}</span>
+            Ordinary Korean Age:{" "}
+            <span>{koreanAge - 1 < 0 ? 0 : koreanAge}</span>
             <p>aka 만 나이</p>
           </div>
           <div>
