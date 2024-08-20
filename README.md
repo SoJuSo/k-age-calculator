@@ -1,6 +1,6 @@
 # Nextjs 14, tw 기반으로 재구현 예정
 
-[crazy 프로젝트](https://github.com/SoJuSo/Can_i_get_your_crazy_number) 종료 후 진행 예정
+[crazyNumber 프로젝트](https://github.com/SoJuSo/Can_i_get_your_crazy_number) 종료 후 진행 예정
 
 # 🖐️k-age-calculator
 
